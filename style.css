@@ -46,15 +46,25 @@
 
 @media (max-width: 35em){
     #primary-header{
+        flex-direction: column;
+        align-items: last baseline;
         background-color: white;
+        z-index: -100;
     }
-
+    #logo-div{
+        padding: 0;
+        background-color: darkolivegreen;
+        margin-right: 5rem;
+        z-index: 100;
+    }
     #primary-nav{
         position: fixed;
         flex-direction: column;
-        inset: 0 0 0 30%;
+        inset: 0 0 0 40%;
         padding: min(20vh, 10rem) 1em;
-        background-color: darkolivegreen;
+        z-index: 1;
         gap: 4rem;
+        background-color: darkolivegreen;
     }
+   
 }
