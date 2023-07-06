@@ -7,27 +7,33 @@
 /* klasy uzytkowe */
 .flex{
     display: flex;
-    gap: 2rem;
 }
 
 /* primary header */
 
 #primary-header{
     align-items: center;
-    justify-content: space-between;
     background-color: darkolivegreen;
+    position: sticky;
+    top: 0;
+    transition: transform 0.4s;
 }
 
 /* navbar (list + logo) */
+
+/* hidding animation */
+
+.nav-hidden{
+    transform: translateY(-10rem);
+}
+
 #primary-nav{
     font-size: 2rem;
     list-style: none;
     padding: 0;
     margin: 0;
-    background-color: rgb(42, 112, 89);
-    padding: 1.5rem;
-    padding-left: 10rem;
-    padding-right: 5rem;
+    justify-content: space-evenly;
+    
 }
 
 #primary-nav a{
@@ -35,36 +41,51 @@
     color: rgb(3, 41, 3);
 }
 
+#primary-nav a:hover{
+    text-decoration: none;
+    color: rgb(177, 208, 177);
+}
+
+nav{
+    padding: 1rem;
+    flex-grow: 1;
+
+}
+
 #logo{
     width: 7rem;
     border-color: black;
     border-style: dotted;
     margin: .5rem;
+
 }
 
 /* mobile */
 
 @media (max-width: 35em){
     #primary-header{
-        flex-direction: column;
-        align-items: last baseline;
         background-color: white;
-        z-index: -100;
     }
     #logo-div{
-        padding: 0;
-        background-color: darkolivegreen;
-        margin-right: 5rem;
-        z-index: 100;
+        visibility: hidden;
     }
     #primary-nav{
+        justify-content: flex-start;
         position: fixed;
         flex-direction: column;
         inset: 0 0 0 40%;
-        padding: min(20vh, 10rem) 1em;
-        z-index: 1;
-        gap: 4rem;
         background-color: darkolivegreen;
+        padding: min(20vh, 10rem) 1rem;
+        gap: 2em;
     }
-   
+   #content{
+    visibility: hidden;
+   }
+
+    
+}
+
+#content{
+       font-size: 5rem; 
+       padding-top: 50px;
 }
