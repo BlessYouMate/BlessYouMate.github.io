@@ -1,6 +1,7 @@
-const nav = document.querySelector("#primary-header");
+const nav = document.querySelector("header");
 let lastScrollY = window.scrollY;
-window.addEventListener("scroll", () => {
+
+window.addEventListener("scroll", () =>{
     if(lastScrollY < window.scrollY){
         nav.classList.add("nav-hidden");
     }
@@ -9,3 +10,4 @@ window.addEventListener("scroll", () => {
     }
     lastScrollY = window.scrollY;
 });
+

@@ -1,112 +1,54 @@
-/* reset */
 *{
     margin: 0;
     padding: 0;
 }
 
-/* klasy uzytkowe */
-.flex{
+header{
     display: flex;
-}
-
-/* primary header */
-
-#primary-header{
     align-items: center;
-    background-color: darkolivegreen;
+    background-color: lightcoral;
+
     position: sticky;
     top: 0;
+
     transition: transform 0.4s;
 }
 
-/* navbar (list + logo) */
-
-/* hidding animation */
-
-.nav-hidden{
-    transform: translateY(-10rem);
-}
-
-#primary-nav{
-    font-size: 2rem;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    justify-content: space-evenly;
-    
-}
-/* nested list */
-
-.nested-list{
-    list-style: none;
-    display: none;
-}
-
-#badania:hover > .nested-list{
-    display: block;
-}
-
-#primary-nav > li {
-    height: 2rem;
-}
-
-.nested-list > li {
-    border-style: solid;
-    border-color: wheat;
-    border-width: 0.1rem;
-    margin: 0.1rem;
-}
-
-#primary-nav a{
-    text-decoration: none;
-    color: rgb(3, 41, 3);
-}
-
-#primary-nav a:hover{
-    text-decoration: none;
-    color: rgb(177, 208, 177);
+#logo > img{
+    width: 7rem;
 }
 
 nav{
-    padding: 1rem;
+    width: 100%;
+}
+
+nav > ul {
+    display: flex;
+    gap: 3rem;
+
+    list-style: none;
+    font-size: 2rem;
+    color:rgb(229, 222, 178);
+}
+
+nav > ul > li{
     flex-grow: 1;
-
+    text-align: center;
 }
 
-#logo{
-    width: 7rem;
-    border-color: black;
-    border-style: dotted;
-    margin: .5rem;
-
+nav > ul > li > a{
+    text-decoration: none;
+    color:rgb(229, 222, 178);
 }
 
-/* mobile */
-
-@media (max-width: 35em){
-    #primary-header{
-        background-color: white;
-    }
-    #logo-div{
-        visibility: hidden;
-    }
-    #primary-nav{
-        justify-content: flex-start;
-        position: fixed;
-        flex-direction: column;
-        inset: 0 0 0 40%;
-        background-color: darkolivegreen;
-        padding: min(20vh, 10rem) 1rem;
-        gap: 2em;
-    }
-   #content{
-    visibility: hidden;
-   }
-
+.nav-hidden
+{
+    transform: translateY(-10rem);
     
 }
 
 #content{
-       font-size: 5rem; 
-       padding-top: 50px;
+    margin-top: 2.5rem;
+    font-size: 5rem;
 }
+
