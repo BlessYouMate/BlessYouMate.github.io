@@ -35,6 +35,15 @@
     justify-content: space-evenly;
     
 }
+/* nested list */
+
+.nested-list{
+    display: none;
+}
+
+li:hover > .nested-list{
+    display: block;
+}
 
 #primary-nav a{
     text-decoration: none;
