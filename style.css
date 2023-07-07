@@ -38,11 +38,23 @@
 /* nested list */
 
 .nested-list{
+    list-style: none;
     display: none;
 }
 
-li:hover > .nested-list{
+#badania:hover > .nested-list{
     display: block;
+}
+
+#primary-nav > li {
+    height: 2rem;
+}
+
+.nested-list > li {
+    border-style: solid;
+    border-color: wheat;
+    border-width: 0.1rem;
+    margin: 0.1rem;
 }
 
 #primary-nav a{
