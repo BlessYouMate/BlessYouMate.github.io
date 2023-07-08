@@ -64,9 +64,10 @@ button{
 
 /* nav-bar */
 
-@media (max-width: 30em){
+@media (max-width: 35em){
     #content{
         background-color: rgb(82, 54, 19);
+        font-size: 1rem;
     }
     
     header{
