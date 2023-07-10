@@ -9,9 +9,14 @@ const button = document.querySelector("button");
 window.addEventListener("scroll", () =>{
     if(lastScrollY < window.scrollY){
         header.classList.add("nav-hidden");
+        // mobile
+        nav.setAttribute("data-visible", "false");
+        header.classList.add("nav-hidden-mobile");
     }
     else{
         header.classList.remove("nav-hidden");
+        // mobile
+        header.classList.remove("nav-hidden-mobile");
     }
     lastScrollY = window.scrollY;
 });
